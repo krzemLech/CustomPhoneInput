@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
+:root {
+  --primary-color: #007bff;
+  --gray-color: #6c757d;
+  --mid-gray-color: #495057;
+  --light-gray-color: #f8f9fa;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  padding-right: 25px;
+
+  label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: .5px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.display {
+
+  p {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 150px;
+    position: relative;
+    height: 28px;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    text-align: center;
+    user-select: none;
+  }
+}
+
+.display:focus-within {
+  p {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-color);
+  }
+  label {
+    color: var(--primary-color);
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: end;
+
+  button {
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid var(--mid-gray-color);
+    box-shadow: 1px 1px 5px 0 var(--light-gray-color);
+    padding-left: 1px;
+    padding-bottom: 1px;
+    line-height: 8px;
+    background: none;
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 2px;
+    }
+
+    &:hover {
+      border-color: 1px solid var(--primary-color);
+      color: var(--primary-color)
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px 20px 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
