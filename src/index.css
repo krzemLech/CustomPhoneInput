@@ -57,6 +57,10 @@
     text-align: center;
     user-select: none;
   }
+
+  .cursor {
+    display: none;
+  }
 }
 
 .display:focus-within {
@@ -66,6 +70,10 @@
   }
   label {
     color: var(--primary-color);
+  }
+  .cursor {
+    display: inline-block;
+    animation: flicker 0.5s forwards infinite;
   }
 }
 
@@ -114,4 +122,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes flicker {
+  0% { opacity: 0 }
+  50% { opacity: 1}
+  100% { opacity: 0 }
 }

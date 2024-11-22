@@ -43,7 +43,7 @@ const PhoneInput = ({ label }: PhoneInputProps) => {
         <div className="display">
           {label && <label>{label}</label>}
           <input type="number" value={phone} onChange={handlePhoneUpdate} ref={inputRef}/>
-          <p className="show" onClick={focusOnInput} onMouseEnter={() => console.log('entered')}>{formatPhone()}</p>
+          <p className="show" onClick={focusOnInput} onMouseEnter={() => console.log('entered')}>{formatPhone()}<span className="cursor">_</span></p>
         </div>
     </div>
   )
